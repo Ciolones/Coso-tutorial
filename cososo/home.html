@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filippagni - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff7e6; /* Colore arancione pastello per lo sfondo */
+            color: #333;
+        }
+        header {
+            background-color: #ffb347; /* Colore arancione pastello per l'intestazione */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1; /* Assicurati che l'intestazione sia sopra il menu */
+        }
+        nav {
+            background-color: #ff9a7f; /* Colore arancione pastello per il menu */
+            padding: 10px 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000; /* Assicurati che il menu sia sopra il contenuto */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Aggiungi ombra per migliorare la visibilità */
+        }
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            margin: 0 10px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #ff8c00;
+            border-radius: 5px;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+            padding-top: 80px; /* Adjust for fixed nav and header */
+        }
+        h1 {
+            color: #ff8c00;
+            margin: 0;
+        }
+        .content {
+            text-align: center;
+        }
+        .content img {
+            max-width: 100%;
+            height: auto;
+        }
+        .menu-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            display: none;
+            font-size: 30px;
+            color: #fff;
+            z-index: 1001; /* Assicurati che l'icona del menu sia sopra il menu */
+        }
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                flex-direction: column;
+                background-color: #ff9a7f;
+                width: 100%;
+                top: 0;
+            }
+            nav a {
+                margin: 10px 0;
+            }
+            .menu-icon {
+                display: block;
+            }
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            var nav = document.querySelector('nav');
+            if (nav.style.display === 'flex') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'flex';
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <h1>Filippagni</h1>
+        <p>Benvenuto sul nostro sito dedicato alla skincare!</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="chi-siamo.html">Chi siamo</a>
+        <a href="blog.html">Blog</a>
+        <a href="prodotti.html">Prodotti</a>
+        <a href="contatti.html">Contatti</a>
+    </nav>
+    <div class="container">
+        <div class="content">
+            <h2>Scopri la nostra Passione per la Skincare</h2>
+            <p>Benvenuto su Filippagni, il tuo punto di riferimento per tutto ciò che riguarda la skincare. Siamo appassionati di bellezza e ci dedichiamo a fornirti le migliori informazioni e consigli per una pelle sana e radiosa.</p>
+            <p>Nel nostro sito troverai:</p>
+            <ul>
+                <li><strong>Blog</strong>: Articoli aggiornati su routine di skincare, recensioni di prodotti e consigli utili.</li>
+                <li><strong>Prodotti</strong>: Una selezione dei migliori prodotti per la tua skincare, con recensioni dettagliate e link per l'acquisto.</li>
+                <li><strong>Chi Siamo</strong>: Scopri di più su di noi, la nostra missione e perché amiamo la skincare.</li>
+                <li><strong>Contatti</strong>: Hai domande o vuoi collaborare? Trova tutte le informazioni per contattarci.</li>
+            </ul>
+            <img src="images/skincare_intro.jpg" alt="Skincare Intro">
+        </div>
+    </div>
+</body>
+</html>
